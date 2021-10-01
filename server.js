@@ -4,7 +4,7 @@ const app = express()
 
 
 app.get('/', (req, res) => {
-    res.send(`Server Working. This is homepage`)
+    res.sendFile(`${__dirname}/index.html`)
 })
 
 console.log(`Heroku Port number is ${process.env.PORT}`)
