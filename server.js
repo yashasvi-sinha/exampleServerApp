@@ -7,6 +7,9 @@ app.get('/', (req, res) => {
     res.send(`Server Working. This is homepage`)
 })
 
-const PORT = 3000
+console.log(`Heroku Port number is ${process.env.PORT}`)
 
-app.listen(PORT, () => console.log(`Server started at PORT ${PORT}`))
+const prt =  process.env.PORT || 3000;
+
+
+app.listen(prt, () => console.log(`Server started at PORT ${prt}`))
